@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Abhijeet Goswami | Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --primary: #6366f1;
+    --secondary: #22c55e;
+    --dark: #0f172a;
+    --light: #f8fafc;
+    --glass: rgba(255,255,255,0.08);
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: var(--light);
+}
+
+/* HERO */
+header {
+    text-align: center;
+    padding: 100px 20px;
+    background: radial-gradient(circle at top, #1e293b, #020617);
+}
+
+header h1 {
+    font-size: 3rem;
+    background: linear-gradient(90deg, #6366f1, #22c55e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+header p {
+    margin-top: 10px;
+    color: #94a3b8;
+    font-size: 1.1rem;
+}
+
+/* Container */
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Section */
+section {
+    background: var(--glass);
+    backdrop-filter: blur(15px);
+    border-radius: 16px;
+    padding: 25px;
+    margin-bottom: 25px;
+    border: 1px solid rgba(255,255,255,0.1);
+    transition: 0.4s;
+}
+
+section:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 40px rgba(99,102,241,0.3);
+}
+
+/* Headings */
+h2 {
+    margin-bottom: 15px;
+    font-weight: 600;
+    color: #e2e8f0;
+    position: relative;
+}
+
+h2::after {
+    content: "";
+    width: 50px;
+    height: 3px;
+    background: var(--primary);
+    display: block;
+    margin-top: 6px;
+}
+
+/* About */
+.about {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.about img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border: 3px solid var(--primary);
+    transition: 0.3s;
+}
+
+.about img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px var(--primary);
+}
+
+/* Text */
+p {
+    color: #cbd5f5;
+    line-height: 1.6;
+}
+
+/* Grid */
+.skills, .profiles {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 15px;
+}
+
+/* Cards */
+.card {
+    background: linear-gradient(135deg, #1e293b, #020617);
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.3s;
+    border: 1px solid rgba(255,255,255,0.08);
+}
+
+.card:hover {
+    transform: translateY(-6px) scale(1.05);
+    background: var(--primary);
+    color: white;
+    box-shadow: 0 0 20px var(--primary);
+}
+
+/* Links */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #94a3b8;
+}
+
+/* Responsive */
+@media(max-width:600px) {
+    header h1 {
+        font-size: 2.2rem;
+    }
+}
+</style>
+
+</head>
+<body>
+
+<header>
+    <h1>Abhijeet Goswami</h1>
+    <p>Data Science Student | MIT Academy of Engineering</p>
+</header>
+
+<div class="container">
+
+<section>
+<h2>About Me</h2>
+<div class="about">
+<img src="Abhijeet.jpg">
+<p>
+I am a first-year engineering student passionate about technology,
+programming, and problem-solving. I enjoy building projects and learning new skills.
+</p>
+</div>
+</section>
+
+<section>
+<h2>Education</h2>
+<p><b>Engineering:</b> MIT Academy of Engineering, Pune</p>
+<p><b>HSC:</b> 82.50%</p>
+<p><b>SSC:</b> 93.60%</p>
+</section>
+
+<section>
+<h2>Skills</h2>
+<div class="skills">
+<div class="card">C</div>
+<div class="card">Python</div>
+<div class="card">HTML</div>
+<div class="card">SQL</div>
+</div>
+</section>
+
+<section>
+<h2>Project</h2>
+<p><b>Student Expense Tracker</b></p>
+<p>Track expenses, manage budget, and analyze spending.</p>
+</section>
+
+<section>
+<h2>Profiles</h2>
+<div class="profiles">
+<div class="card"><a href="https://github.com/">GitHub</a></div>
+<div class="card"><a href="https://linkedin.com/">LinkedIn</a></div>
+</div>
+</section>
+
+<section>
+<h2>Contact</h2>
+<p>Email: abhijeetgoswami0456@gmail.com</p>
+<p>Phone: +91 9403626322</p>
+</section>
+
+</div>
+
+<footer>
+© 2026 Abhijeet Goswami
+</footer>
+
+</body>
+</html>
