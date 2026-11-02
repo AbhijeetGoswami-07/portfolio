@@ -66,25 +66,56 @@
 
         .section-tag { color: var(--accent); font-size: 11px; letter-spacing: 4px; text-transform: uppercase; margin-bottom: 30px; display: block; }
 
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; width: 100%; }
+        .grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 24px; 
+            width: 100%; 
+            align-items: stretch;
+        }
         
         .card { 
             background: var(--glass); 
             border: 1px solid var(--glass-border); 
-            padding: 40px; 
+            padding: 36px 32px; 
             border-radius: 20px; 
             transition: border 0.4s ease, transform 0.4s ease;
             text-decoration: none;
             color: inherit;
-            /* Fix for email overflow shown in image_7b26dc.png */
-            word-break: break-word;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            height: 100%;
+            box-sizing: border-box;
+            word-break: normal;
             overflow-wrap: break-word;
-            hyphens: auto;
+            hyphens: none;
         }
         .card:hover { border-color: var(--accent); transform: translateY(-5px); }
-        .card h4 { font-family: 'Playfair Display', serif; font-size: clamp(1.2rem, 3vw, 1.5rem); margin-bottom: 10px; }
-        .card p { color: var(--secondary); font-size: 14px; }
-        .highlight { color: var(--accent); font-weight: 600; font-size: 10px; text-transform: uppercase; display: block; margin-bottom: 10px; }
+        .card h4 { 
+            font-family: 'Playfair Display', serif; 
+            font-size: clamp(1.2rem, 2.5vw, 1.5rem); 
+            margin-bottom: 12px; 
+            line-height: 1.3;
+        }
+        .card p { 
+            color: var(--secondary); 
+            font-size: 14px; 
+            line-height: 1.6;
+            flex-grow: 1;
+        }
+        .highlight { 
+            color: var(--accent); 
+            font-weight: 600; 
+            font-size: 10px; 
+            letter-spacing: 1.2px;
+            text-transform: uppercase; 
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 12px; 
+            min-height: 28px;
+            line-height: 1.4;
+        }
 
         .stat-row { display: flex; gap: 20px; margin-top: 40px; flex-wrap: wrap; }
         .stat-box { flex: 1; min-width: 160px; background: var(--glass); padding: 30px; border-radius: 15px; text-align: center; border: 1px solid var(--glass-border); }
@@ -143,6 +174,21 @@
     <section id="projects">
         <span class="section-tag">Featured Projects</span>
         <div class="grid">
+            <a href="https://github.com/AbhijeetGoswami-07/CampusNet" target="_blank" class="card">
+                <span class="highlight">Full Stack • React • TypeScript • Vite • Supabase • Leaflet • Tailwind CSS</span>
+                <h4>CampusNet ↗</h4>
+                <p>A verified student accommodation & living platform for Pune universities (COEP, MIT-WPU, Symbiosis, VIT) featuring transparent recurring expense breakdowns, side-by-side PG/hostel comparison, verified campus radius radar, and roommate compatibility matching with zero brokerage.</p>
+            </a>
+            <a href="https://github.com/AbhijeetGoswami-07/NetSage-AI" target="_blank" class="card">
+                <span class="highlight">Full Stack • Python • Network AI • Cisco IOS • SQLite</span>
+                <h4>NetSage-AI ↗</h4>
+                <p>Developed an enterprise AI network troubleshooting tool featuring 10 deterministic protocol rule checkers (OSPF, VLAN, ARP, ACL), real-time Cisco CLI parsing, and a 5-stage human-governed verification pipeline across 40+ benchmark cases.</p>
+            </a>
+            <a href="https://github.com/AbhijeetGoswami-07/Safar-And-Saloon" target="_blank" class="card">
+                <span class="highlight">Full Stack • JavaScript • Node.js • Web Audio API • HTML5 Canvas • Tailwind CSS</span>
+                <h4>Safar and Saloon ↗</h4>
+                <p>Architected an immersive dual-mode retro Hi-Fi radio web platform streaming 150+ curated tracks across 10 vintage FM/AM frequencies with 60 FPS procedural perspective canvas rendering, realistic Web Audio API sound synthesis, sleep timers, and printable souvenir ticket generation.</p>
+            </a>
             <div class="card">
                 <span class="highlight">Engineering</span>
                 <h4>Floating Waste Collector</h4>
@@ -218,7 +264,7 @@
         gsap.from(".reveal", { y: 80, opacity: 0, duration: 1.5, stagger: 0.2, ease: "power4.out" });
 
         document.querySelectorAll('section').forEach(sec => {
-            const elements = sec.querySelectorAll('.card, .stat-box, h2, p');
+            const elements = sec.querySelectorAll('.card, .stat-box, h2, section > p');
             if (elements.length > 0) {
                 gsap.from(elements, {
                     scrollTrigger: { trigger: sec, start: "top 80%" },
